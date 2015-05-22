@@ -1,0 +1,51 @@
+body {
+  background-color: white;
+  font-family: "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif; }
+
+a {
+  color: #1c96ef; }
+  a:hover, a:focus {
+    color: #32aaff;
+    text-decoration: none; }
+
+.center {
+  width: 960px;
+  margin: auto;
+  padding: 15px; }
+
+#header_wrap {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(1, black), color-stop(0, #464646)); }
+
+#header_wrap > .center {
+  padding: 15px 100px; }
+
+.brand {
+  margin: 10px 0px; }
+
+.wrap {
+  margin-top: 30px; }
+
+.one-article {
+  margin-bottom: 40px; }
+
+.one-article:after {
+  display: table; }
+
+.one-article .create-time {
+  text-align: right;
+  margin-top: 15px; }
+
+.one-article .title {
+  font-size: 25px;
+  font-weight: bold;
+  text-align: right;
+  line-height: 24px; }
+
+.one-article .content {
+  padding-bottom: 30px;
+  border-bottom: solid 1px #dfdfdf; }
+
+.one-article:last-child .content {
+  border-bottom-width: 0px; }
+
+/*# sourceMappingURL=base.css.map */

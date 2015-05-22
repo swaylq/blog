@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html ng-app="blog">
+    <head>
+        <meta charset='utf-8'>
+        <meta http-equiv="X-UA-Compatible" content="chrome=1">
+        <meta name="description" content="Swaylq.GitHub.io : ">      
+        <link rel="stylesheet" type="text/css" media="screen" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="bower_components/animate.css/animate.min.css">
+        <link rel="stylesheet" type="text/css" media="screen" href="css/base.css">
+        <link rel="stylesheet" href="bower_components/nprogress/nprogress.css">
+        <script src="bower_components/jquery/dist/jquery.min.js"></script>
+        <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="bower_components/angularjs/angular.js"></script>
+        <script src="bower_components/nprogress/nprogress.js"></script>
+        <script src="js/article.js"></script>
+        <script src="js/main.js"></script>
+        <title>Sway</title>
+    </head>
+    
+    <body ng-controller="MainCtrl">
+        <div id="header_wrap">
+            <div class="center">
+                <h1 class="brand"><a href="/">Sway</a></h1>
+            </div>
+        </div>
+        <div class="wrap center">
+            <div class="one-article row" ng-repeat="article in articles">
+                <div class="col-xs-3">
+                    <div class="title">{{article.title}}</div>
+                    <div class="create-time">创建于&nbsp;&nbsp;{{article.createdAt}}</div>
+                </div>
+                <div class="col-xs-9">
+                    <div class="content" ng-bind-html="article.content|to_trusted">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </body>
+</html>
