@@ -22,6 +22,12 @@ a {
     padding: 15px;
 }
 
+@media(max-width:960px) {
+    .center {
+        width: 100%;
+    }
+}
+
 #header_wrap {
     background: -webkit-gradient(linear, left top, left bottom, color-stop(1, black), color-stop(0, rgb(70,70,70)));
 }
