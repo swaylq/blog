@@ -16,6 +16,21 @@ $(window).load(function (){
 
 blog.controller('MainCtrl', ['$scope', function ($scope) {
     $scope.articles = articles; 
+    $scope.articles.forEach(function (one){
+        one.height = '80px';
+        one.isOpen = false;
+    });
+    $scope.open = function (index) {
+        $scope.articles.forEach(function (one, i){
+            if (i != index) {
+                one.height = '80px';
+                one.isOpen = false;
+            } else {
+                one.height = one.height == '80px' ? 'auto' : '80px';
+                one.isOpen = one.height == '80px' ? false : true;
+            }
+        });
+    }
 }]);
 
 blog.filter('to_trusted', ['$sce', function ($sce) {

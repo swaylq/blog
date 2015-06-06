@@ -32,7 +32,10 @@
                     <div class="create-time">创建于&nbsp;&nbsp;{{article.createdAt}}</div>
                 </div>
                 <div class="col-xs-9">
-                    <div class="content" ng-bind-html="article.content|to_trusted">
+                    <div class="content" ng-click="open($index)" style="cursor:pointer">
+                        <div class="detail" ng-bind-html="article.content|to_trusted" style="height:{{article.height}};overflow:hidden;">
+                        </div>
+                        <span ng-show="!article.isOpen" style="margin-top:10px;font-size:16px;">.&nbsp;.&nbsp;.&nbsp;</span>
                     </div>
                 </div>
             </div>
