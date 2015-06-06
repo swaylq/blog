@@ -26,13 +26,14 @@
             </div>
         </div>
         <div class="wrap center">
-            <div class="one-article row" ng-repeat="article in articles" id="article-{{$index}}">
+            <div class="one-article row" ng-repeat="article in articles">
+                <div class="tag" id="article-{{$index}}"></div>
                 <div class="col-xs-3">
                     <div class="title">{{article.title}}</div>
                     <div class="create-time">创建于&nbsp;&nbsp;{{article.createdAt}}</div>
                 </div>
                 <div class="col-xs-9">
-                    <div class="content" ng-click="open($index)" style="cursor:pointer">
+                    <div class="content" ng-click="open($index)">
                         <div class="detail" ng-bind-html="article.content|to_trusted" style="height:{{article.height}};overflow:hidden;">
                         </div>
                         <span ng-show="!article.isOpen" style="margin-top:10px;font-size:16px;">.&nbsp;.&nbsp;.&nbsp;</span>

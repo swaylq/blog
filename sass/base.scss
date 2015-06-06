@@ -46,27 +46,30 @@ a {
 
 .one-article {
     margin-bottom: 40px;
+    position: relative;
+    .tag {
+        position: absolute;
+        top: -40px;
+    }
+    .content {
+        padding-bottom: 30px;
+        cursor: pointer;
+        @include border('bottom');
+    }
+    .title {
+        font-size: 25px;
+        font-weight: bold;
+        text-align: right;
+        line-height: 24px;
+    }    
+    .create-time {
+        text-align: right;
+        margin-top: 15px;
+    }
 }
 
 .one-article:after {
     display: table;
-}
-
-.one-article .create-time {
-    text-align: right;
-    margin-top: 15px;
-}
-
-.one-article .title {
-    font-size: 25px;
-    font-weight: bold;
-    text-align: right;
-    line-height: 24px;
-}
-
-.one-article .content {
-    padding-bottom: 30px;
-    @include border('bottom');
 }
 
 .one-article:last-child .content {

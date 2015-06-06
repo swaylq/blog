@@ -28,10 +28,12 @@ blog.controller('MainCtrl', ['$scope', '$anchorScroll', '$location', function ($
             } else {
                 one.height = one.height == '80px' ? 'auto' : '80px';
                 one.isOpen = one.height == '80px' ? false : true;
+                if (one.height == 'auto') {
+                    $location.hash('article-' + index);
+                    $anchorScroll();
+                }
             }
         });
-        $location.hash('article-' + index);
-        $anchorScroll();
     }
 }]);
 
