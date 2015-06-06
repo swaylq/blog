@@ -2,8 +2,6 @@
 /* global angular */
 /* global articles */
 /* global NProgress */
-var blog = angular.module('blog',[]);
-
 $(document).ready(function (){
     console.log('start');
     NProgress.start();
@@ -14,7 +12,9 @@ $(window).load(function (){
     NProgress.done();
 });
 
-blog.controller('MainCtrl', ['$scope', '$anchorScroll', '$location', function ($scope, $anchorScroll, $location) {
+var blog = angular.module('blog',['ngAnimate']);
+
+blog.controller('MainCtrl', ['$scope', '$anchorScroll', '$location', '$animate',function ($scope, $anchorScroll, $location, $animate) {
     $scope.articles = articles; 
     $scope.articles.forEach(function (one){
         one.height = '80px';
@@ -35,6 +35,7 @@ blog.controller('MainCtrl', ['$scope', '$anchorScroll', '$location', function ($
             }
         });
     }
+  
 }]);
 
 blog.filter('to_trusted', ['$sce', function ($sce) {
