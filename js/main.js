@@ -14,7 +14,7 @@ $(window).load(function (){
     NProgress.done();
 });
 
-blog.controller('MainCtrl', ['$scope', function ($scope) {
+blog.controller('MainCtrl', ['$scope', '$anchorScroll', '$location', function ($scope, $anchorScroll, $location) {
     $scope.articles = articles; 
     $scope.articles.forEach(function (one){
         one.height = '80px';
@@ -30,6 +30,8 @@ blog.controller('MainCtrl', ['$scope', function ($scope) {
                 one.isOpen = one.height == '80px' ? false : true;
             }
         });
+        $location.hash('article-' + index);
+        $anchorScroll();
     }
 }]);
 

@@ -26,7 +26,7 @@
             </div>
         </div>
         <div class="wrap center">
-            <div class="one-article row" ng-repeat="article in articles">
+            <div class="one-article row" ng-repeat="article in articles" id="article-{{$index}}">
                 <div class="col-xs-3">
                     <div class="title">{{article.title}}</div>
                     <div class="create-time">创建于&nbsp;&nbsp;{{article.createdAt}}</div>
