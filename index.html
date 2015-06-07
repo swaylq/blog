@@ -37,7 +37,7 @@
                     <div class="content">
                         <div class="detail" ng-class="{'lap':!article.isOpen}" ng-bind-html="article.content|to_trusted" ng-click="article.isOpen=true">
                         </div>
-                        <a ng-click="article.isOpen=!article.isOpen" style="margin-top:20px;font-size:16px;" ng-bind="article.isOpen?'收起':'.&nbsp;.&nbsp;.&nbsp;'">
+                        <a ng-click="toggle($index)" style="margin-top:20px;font-size:16px;" ng-bind="article.isOpen?'收起':'.&nbsp;.&nbsp;.&nbsp;'">
                         </a>
                     </div>
                 </div>

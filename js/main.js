@@ -20,8 +20,12 @@ blog.controller('MainCtrl', ['$scope', '$anchorScroll', '$location', '$animate',
         one.height = '80px';
         one.isOpen = false;
     });
-    $scope.toggle = function (article) {
-        
+    $scope.toggle = function (index) {
+        $scope.articles[index].isOpen = !$scope.articles[index].isOpen;
+        if (!$scope.articles[index].isOpen) {
+            $location.hash('article-' + index);
+            $anchorScroll();
+        }
     }
   
 }]);
