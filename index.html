@@ -28,11 +28,12 @@
         <div class="wrap center">
             <div class="one-article row" ng-repeat="article in articles">
                 <div class="tag" id="article-{{$index}}"></div>
-                <div class="col-xs-3">
+                <div class="col-lg-3 header">
                     <div class="title">{{article.title}}</div>
                     <div class="create-time">创建于&nbsp;&nbsp;{{article.createdAt}}</div>
+                    <div style="clear:both"></div>
                 </div>
-                <div class="col-xs-9">
+                <div class="col-lg-9">
                     <div class="content" ng-click="article.isOpen=!article.isOpen">
                         <div class="detail" ng-class="{'lap':!article.isOpen}" ng-bind-html="article.content|to_trusted">
                         </div>
