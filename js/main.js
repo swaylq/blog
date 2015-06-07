@@ -20,20 +20,8 @@ blog.controller('MainCtrl', ['$scope', '$anchorScroll', '$location', '$animate',
         one.height = '80px';
         one.isOpen = false;
     });
-    $scope.open = function (index) {
-        $scope.articles.forEach(function (one, i){
-            if (i != index) {
-                one.height = '80px';
-                one.isOpen = false;
-            } else {
-                one.height = one.height == '80px' ? 'auto' : '80px';
-                one.isOpen = one.height == '80px' ? false : true;
-                if (one.height == 'auto') {
-                    $location.hash('article-' + index);
-                    $anchorScroll();
-                }
-            }
-        });
+    $scope.toggle = function (article) {
+        
     }
   
 }]);
