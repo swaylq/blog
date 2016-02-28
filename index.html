@@ -11,10 +11,11 @@
         <script src="bower_components/jquery/dist/jquery.min.js"></script>
         <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
         <script src="bower_components/angular/angular.min.js"></script>
-        <script src="bower_components/angular-animate/angular-animate.min.js"></script>        
+        <script src="bower_components/angular-animate/angular-animate.min.js"></script>
         <script src="bower_components/nprogress/nprogress.js"></script>
         <script src="js/article.js"></script>
         <script src="js/main.js"></script>
+        <script src="js/markdown.js" charset="utf-8"></script>
         <title>Sway</title>
     </head>
     
@@ -34,11 +35,7 @@
                     <div style="clear:both"></div>
                 </div>
                 <div class="col-lg-9">
-                    <div class="content">
-                        <div class="detail" ng-class="{'lap':!article.isOpen}" ng-bind-html="article.content|to_trusted" ng-click="article.isOpen=true">
-                        </div>
-                        <a ng-click="toggle($index)" style="margin-top:20px;font-size:16px;" ng-bind="article.isOpen?'收起':'.&nbsp;.&nbsp;.&nbsp;'">
-                        </a>
+                    <div class="content" article-content="{{article.file}}">
                     </div>
                 </div>
             </div>
@@ -49,7 +46,6 @@
             height: 80px;
             overflow: hidden;
         }
-
 
         .lap-remove {
             transition: all linear 0.3s;

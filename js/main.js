@@ -3,18 +3,16 @@
 /* global articles */
 /* global NProgress */
 $(document).ready(function (){
-    console.log('start');
     NProgress.start();
 });
 
 $(window).load(function (){
-    console.log('end');
     NProgress.done();
 });
 
 var blog = angular.module('blog',['ngAnimate']);
 
-blog.controller('MainCtrl', ['$scope', '$anchorScroll', '$location', '$animate',function ($scope, $anchorScroll, $location, $animate) {
+blog.controller('MainCtrl', ['$scope', '$anchorScroll', '$location', '$animate', function ($scope, $anchorScroll, $location, $animate) {
     $scope.articles = articles; 
     $scope.articles.forEach(function (one){
         one.height = '80px';
@@ -29,6 +27,19 @@ blog.controller('MainCtrl', ['$scope', '$anchorScroll', '$location', '$animate',
     }
   
 }]);
+
+blog.directive('articleContent', ['$http', function ($http){
+    return {
+        restrict: 'EA',
+        link: function (scope, element, attr) {
+            var file = attr.articleContent;
+            $http.get('/articles/' + file).success(function (data){
+                htmlContent = markdown.toHTML(data);
+                element.html(htmlContent);
+            })
+        }
+    }
+}])
 
 blog.filter('to_trusted', ['$sce', function ($sce) {
     return function (text) {
