@@ -1,11 +1,6 @@
-$mainBackgroudColor: white;
-$mainFontFamily: "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
-$blue: rgb(28, 150, 239);
-$hoverBlue: rgb(50, 170, 255);
-
 @mixin border($value) {
-	@if $value == 'left' {border-left: solid 1px rgb(223,223,223);}
-	@if $value == 'right' {border-right: solid 1px rgb(223,223,223);}
-	@if $value == 'top' {border-top: solid 1px rgb(223,223,223);}
-	@if $value == 'bottom' {border-bottom: solid 1px rgb(223,223,223);}
+    @if $value == 'left' {border-left: solid 1px rgb(223,223,223);}
+    @if $value == 'right' {border-right: solid 1px rgb(223,223,223);}
+    @if $value == 'top' {border-top: solid 1px rgb(223,223,223);}
+    @if $value == 'bottom' {border-bottom: solid 1px rgb(223,223,223);}
 }

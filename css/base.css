@@ -1,12 +1,27 @@
+.header {
+  padding: 85px 122px 0px 122px; }
+  .header .brand {
+    font-size: 25px;
+    float: left;
+    color: #303030; }
+  .header .nav {
+    padding-top: 12px;
+    float: right; }
+    .header .nav li {
+      color: #999999;
+      font-size: 16px;
+      width: 80px;
+      cursor: pointer;
+      text-align: center;
+      display: inline-block; }
+      .header .nav li.active {
+        color: #303030; }
+  .header:after {
+    clear: both; }
+
 body {
   background-color: white;
-  font-family: "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif; }
-
-a {
-  color: #1c96ef; }
-  a:hover, a:focus {
-    color: #32aaff;
-    text-decoration: none; }
+  font-family: "Interstate-ExtraLight", sans-serif; }
 
 .center {
   width: 960px;

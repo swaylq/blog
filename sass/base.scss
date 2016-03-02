@@ -1,19 +1,10 @@
 @import "color.scss";
+@import "variable.scss";
+@import "nav.scss";
 
 body {
-	background-color: $mainBackgroudColor;
+    background-color: $mainBackgroudColor;
     font-family: $mainFontFamily;
-    
-}
-
-a {
-    color: $blue;
-    &:hover,
-    &:focus
-    {
-        color: $hoverBlue;
-        text-decoration: none;  
-    }
 }
 
 .center {

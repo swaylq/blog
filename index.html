@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="blog">
+<html>
     <head>
         <meta charset='utf-8'>
         <meta http-equiv="X-UA-Compatible" content="chrome=1">
@@ -7,53 +7,30 @@
         <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
         <link rel="stylesheet" type="text/css" media="screen" href="css/lib/bootstrap.min.css">
         <link rel="stylesheet" type="text/css" media="screen" href="css/base.css">
-        <link rel="stylesheet" href="bower_components/nprogress/nprogress.css">
+        <link rel="stylesheet" type="text/css" media="screen" href="css/lib/nprogress.css">
+        <link rel="stylesheet" type="text/css" media="screen" href="fonts/font.css">
+        <title>Sway</title>
+    </head>
+    <body  ng-app="blog">
+        <div ng-controller="NavCtrl" class="header">
+            <div class="brand">
+                Sway
+            </div>
+            <ul class="nav">
+                <li ng-class="{'active': nav=='/work'}" ng-click="goto('work')">Work</li>
+                <li ng-class="{'active': nav=='/about'}" ng-click="goto('about')">About</li>
+                <li ng-class="{'active': nav=='/blog' || nav=='/article'}" ng-click="goto('blog')">Blog</li>
+                <li ng-class="{'active': nav=='/contact'}" ng-click="goto('contact')">Contact</li>
+            </ul>
+        </div>
+        <div class="outer-wrap" ui-view ng-cloak></div>
         <script src="js/lib/jquery.min.js"></script>
         <script src="js/lib/bootstrap.min.js"></script>
         <script src="js/lib/angular.min.js"></script>
-        <script src="js/lib/angular-animate.min.js"></script>
+        <script src="js/lib/angular-ui-router.min.js"></script>
+        <script src="js/lib/markdown.js"></script>
         <script src="js/lib/nprogress.js"></script>
         <script src="js/article.js"></script>
         <script src="js/main.js"></script>
-        <script src="js/markdown.js" charset="utf-8"></script>
-        <title>Sway</title>
-    </head>
-    
-    <body ng-controller="MainCtrl">
-        <div id="header_wrap">
-            <div class="center">
-                <h1 class="brand"><a href="/">Sway</a></h1>
-            </div>
-        </div>
-
-        <div class="wrap center">
-            <div class="one-article row" ng-repeat="article in articles">
-                <div class="tag" id="article-{{$index}}"></div>
-                <div class="col-lg-3 header">
-                    <div class="title">{{article.title}}</div>
-                    <div class="create-time">创建于&nbsp;&nbsp;{{article.createdAt}}</div>
-                    <div style="clear:both"></div>
-                </div>
-                <div class="col-lg-9">
-                    <div class="content" article-content="{{article.file}}">
-                    </div>
-                </div>
-            </div>
-        </div>
     </body>
-    <style>
-        .lap {
-            height: 80px;
-            overflow: hidden;
-        }
-
-        .lap-remove {
-            transition: all linear 0.3s;
-        }
-
-        .lap-remove-active {
-            height: 500px;
-            overflow: hidden;
-        }
-    </style>
 </html>

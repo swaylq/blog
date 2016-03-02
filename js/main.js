@@ -10,39 +10,75 @@ $(window).load(function (){
     NProgress.done();
 });
 
-var blog = angular.module('blog',['ngAnimate']);
-
-blog.controller('MainCtrl', ['$scope', '$anchorScroll', '$location', '$animate', function ($scope, $anchorScroll, $location, $animate) {
-    $scope.articles = articles; 
-    $scope.articles.forEach(function (one){
-        one.height = '80px';
-        one.isOpen = false;
+var blog = angular.module('blog', ['ui.router'])
+    .config(function($stateProvider, $urlRouterProvider) {
+        $stateProvider
+            .state('work', {
+                url: '/work',
+                templateUrl: 'templates/work.html',
+                controller: 'WorkCtrl'
+            })
+            .state('about', {
+                url: '/about',
+                templateUrl: 'templates/about.html',
+                controller: 'AboutCtrl'
+            })
+            .state('blog', {
+                url: '/blog',
+                templateUrl: 'templates/blog.html',
+                controller: 'BlogCtrl'
+            })
+            .state('contact', {
+                url: '/contact',
+                templateUrl: 'templates/contact.html',
+                controller: 'ContactCtrl'
+            })
+            .state('article', {
+                url: '/article/:articleID',
+                templateUrl: '/templates/article.html',
+                controller: 'ArticleCtrl'
+            });
+        $urlRouterProvider.otherwise('/about');
     });
-    $scope.toggle = function (index) {
-        $scope.articles[index].isOpen = !$scope.articles[index].isOpen;
-        if (!$scope.articles[index].isOpen) {
-            $location.hash('article-' + index);
-            $anchorScroll();
-        }
+    
+blog.controller('NavCtrl', ['$scope', '$location', function ($scope, $location){
+    $scope.nav = $location.path();
+    $scope.goto = function (path) {
+        $location.path(path);
+        $scope.nav = '/' + path;
     }
-  
 }]);
 
-blog.directive('articleContent', ['$http', function ($http){
+blog.controller('WorkCtrl', ['$scope', function ($scope){
+    console.log('work controller');
+}]);
+
+blog.controller('AboutCtrl', ['$scope', function ($scope){
+    console.log('about controller');
+}]);
+
+blog.controller('BlogCtrl', ['$scope', function ($scope){
+    console.log('blog controller');
+}]);
+
+blog.controller('ContactCtrl', ['$scope', function ($scope){
+    console.log('contact controller');
+}]);
+
+blog.controller('ArticleCtrl', ['$scope', '$stateParams', function ($scope, $stateParams){
+    console.log('article controller');
+    console.log($stateParams.articleID);
+}]);
+
+blog.directive('markdownData', ['$http', function ($http){
     return {
         restrict: 'EA',
         link: function (scope, element, attr) {
-            var file = attr.articleContent;
-            $http.get('/articles/' + file).success(function (data){
+            var file = attr.markdownData;
+            $http.get('/markdowns/' + file).success(function (data){
                 htmlContent = markdown.toHTML(data);
                 element.html(htmlContent);
             })
         }
     }
 }])
-
-blog.filter('to_trusted', ['$sce', function ($sce) {
-    return function (text) {
-        return $sce.trustAsHtml(text);
-    };
-}]);

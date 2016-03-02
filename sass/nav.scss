@@ -1,0 +1,26 @@
+.header {
+    padding: 85px 122px 0px 122px;
+    .brand {
+        font-size: 25px;
+        float: left;
+        color: $textBlack;
+    }
+    .nav {
+        padding-top: 12px;
+        float: right;
+        li {
+            color: $textGray;
+            font-size: 16px;
+            width: 80px;
+            cursor: pointer;
+            text-align: center;
+            display: inline-block;;
+            &.active {
+                color: $textBlack;
+            }
+        }
+    }
+    &:after {
+        clear: both;
+    }
+}
