@@ -1,0 +1,29 @@
+.footer {
+    height: 215px;
+    padding: 81px 122px;
+    margin-top: 135px;
+    background-color: $bgGray;
+    .left {
+        float: left;
+        .copyright {
+            color: $textBlack;
+        }
+        .resume {
+            color: $textGray;
+            margin-top: 17px;
+        }
+    }
+    .right {
+        float: right;
+        .nav {
+            li {
+                display: inline-block;;
+            }
+        }
+    }
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}

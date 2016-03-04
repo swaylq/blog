@@ -1,83 +1,11 @@
 @import "color.scss";
 @import "variable.scss";
 @import "nav.scss";
+@import "footer.scss";
+
+@import "about.scss";
 
 body {
     background-color: $mainBackgroudColor;
     font-family: $mainFontFamily;
-}
-
-.center {
-    width: 960px;
-    margin: auto;
-    padding: 15px;
-}
-
-@media(max-width:960px) {
-    .center {
-        width: 100%;
-    }
-    .one-article {
-        .header {
-            text-align: left;
-            margin-bottom: 10px;
-        }
-        .create-time {
-            display: none;
-        }
-    }
-}
-
-@media(min-width:960px) {
-    .one-article {
-        .header {
-            text-align: right;
-        }
-    }
-}
-
-#header_wrap {
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(1, black), color-stop(0, rgb(70,70,70)));
-    .center {
-        padding: 15px 100px;
-    }
-}
-
-.brand {
-    margin: 10px 0px;
-}
-
-.wrap {
-    margin-top: 30px;
-}
-
-.one-article {
-    margin-bottom: 40px;
-    position: relative;
-    .tag {
-        position: absolute;
-        top: -40px;
-    }
-    .content {
-        padding-bottom: 30px;
-        cursor: pointer;
-        @include border('bottom');
-    }
-    .title {
-        font-size: 25px;
-        font-weight: bold;
-        line-height: 24px;
-    }    
-    .create-time {
-        margin-top: 15px;
-    }
-
-}
-
-.one-article:after {
-    display: table;
-}
-
-.one-article:last-child .content {
-    border-bottom-width: 0px;
 }

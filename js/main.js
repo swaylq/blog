@@ -43,6 +43,7 @@ var blog = angular.module('blog', ['ui.router'])
     
 blog.controller('NavCtrl', ['$scope', '$location', function ($scope, $location){
     $scope.nav = $location.path();
+    console.log($scope.nav);
     $scope.goto = function (path) {
         $location.path(path);
         $scope.nav = '/' + path;

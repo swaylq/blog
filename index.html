@@ -11,19 +11,33 @@
         <link rel="stylesheet" type="text/css" media="screen" href="fonts/font.css">
         <title>Sway</title>
     </head>
-    <body  ng-app="blog">
-        <div ng-controller="NavCtrl" class="header">
+    <body ng-app="blog">
+        <div class="header" ng-controller="NavCtrl">
             <div class="brand">
                 Sway
             </div>
             <ul class="nav">
                 <li ng-class="{'active': nav=='/work'}" ng-click="goto('work')">Work</li>
                 <li ng-class="{'active': nav=='/about'}" ng-click="goto('about')">About</li>
-                <li ng-class="{'active': nav=='/blog' || nav=='/article'}" ng-click="goto('blog')">Blog</li>
+                <li ng-class="{'active': nav=='/blog' || nav.indexOf('/article') == 0}" ng-click="goto('blog')">Blog</li>
                 <li ng-class="{'active': nav=='/contact'}" ng-click="goto('contact')">Contact</li>
             </ul>
         </div>
-        <div class="outer-wrap" ui-view ng-cloak></div>
+        <div class="outer-wrap" ui-view>
+        </div>
+        <div class="footer">
+            <div class="left">
+                <div class="copyright">© 2016 Sway</div>
+                <div class="resume">el psy kongroo</div>
+            </div>
+            <div class="right">
+                <ul class="nav social-list">
+                    <li><a href="https://github.com/swaylq" target="_blank"><img src="/images/social/github.svg"></a></li>
+                    <li><a href="https://www.facebook.com/sway.liu.1" target="_blank"><img src="/images/social/twitter.svg"></a></li>
+                    <li><a href="https://twitter.com/swaylq" target="_blank"><img src="/images/social/facebook.svg"></a></li>
+                </ul>
+            </div>
+        </div>
         <script src="js/lib/jquery.min.js"></script>
         <script src="js/lib/bootstrap.min.js"></script>
         <script src="js/lib/angular.min.js"></script>
