@@ -1,0 +1,57 @@
+#blog {
+    .select {
+        margin: 100px 0px 0px 122px;
+        .current-type {
+            display: inline-block;
+            color: $textBlack;
+            font-size: 30px;
+        }
+        i {
+            margin-left: 15px;
+            vertical-align: super;
+            color: $textGray;
+            cursor: pointer;
+        }
+    }
+    .list {
+        margin-top: 80px;
+        .article {
+            float: left;
+            width: 50%;
+            height: 430px;
+            padding: 88px 122px;
+            &.active {
+                background-color: $bgGray;
+            }
+            .title {
+                color: $textBlack;
+                font-size: 30px;
+                text-align: left;
+            }
+            .summary {
+                color: $textGray;
+                font-size: 18px;
+                line-height: 40px;
+                height: 120px;
+                word-break: break-all;
+                overflow-y: hidden;
+            }
+            .create-time {
+                margin-top: 20px;
+                color: $textGray;
+                font-size: 18px;
+                text-align: right;
+            }
+        }
+        &:after { @extend .clear-both; }
+    }
+}
+
+
+.arrow-down {
+    width: 0; 
+    height: 0; 
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-top: 20px solid #f00;
+}

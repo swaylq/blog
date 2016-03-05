@@ -1,0 +1,24 @@
+<div class="inner-wrap" id="blog">
+    <div class="select">
+        <div class="current-type">
+            {{types[0]}}
+        </div>
+        <i class="glyphicon glyphicon-menu-down">
+        </i>
+        <div class="separate-line"></div>
+    </div>
+    <div class="list">
+        <div class="article" ng-class="{'active': $index == 0}"ng-repeat="article in articles track by $index" ng-show="article.type==currentType">
+            <div class="title">
+                {{article.title}}
+            </div>
+            <div class="separate-line"></div>
+            <div class="summary">
+                {{article.summary}}
+            </div>
+            <div class="create-time">
+                {{article.createdAt}}
+            </div>
+        </div>
+    </div>
+</div>

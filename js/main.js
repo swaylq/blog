@@ -60,6 +60,17 @@ blog.controller('AboutCtrl', ['$scope', function ($scope){
 
 blog.controller('BlogCtrl', ['$scope', function ($scope){
     console.log('blog controller');
+    
+    $scope.types = ['Technical articles', 'Literary notes'];
+    $scope.currentType = 'Literary notes';
+    var sample = {
+        id: 1,
+        title: 'Try Git',
+        createdAt: 'Jan 1, 2013',
+        summary: 'Learn how to use Git by reviewing the basic concepts of Git version control. Try out this introductory course that was created with GitHub.',
+        type: 'Literary notes'
+    };
+    $scope.articles = [sample, sample, sample];
 }]);
 
 blog.controller('ContactCtrl', ['$scope', function ($scope){

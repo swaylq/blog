@@ -1,9 +1,11 @@
 @import "color.scss";
 @import "variable.scss";
+@import "extend.scss";
 @import "nav.scss";
 @import "footer.scss";
 
 @import "about.scss";
+@import "blog.scss";
 
 body {
     background-color: $mainBackgroudColor;
