@@ -82,4 +82,4 @@
   ```
   $ git pull origin master
   ```
-  [下一篇：Try Git 00x00](/#/article/1)
+  [下一篇：Try Git 00x01](/#/article/1)
