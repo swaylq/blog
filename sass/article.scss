@@ -1,5 +1,7 @@
 #article {
-    padding: 100px 122px;
+    @media (min-width: $breakWidth) {
+        padding: 100px 122px;
+    }
     .title {
         text-align: center;
         color: $textBlack;

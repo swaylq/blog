@@ -12,6 +12,9 @@
             color: $textGray;
             cursor: pointer;
         }
+        @media (max-width: $breakWidth) {
+            margin: 5% 10%;
+        }
     }
     .list {
         margin-top: 80px;
@@ -41,6 +44,11 @@
                 color: $textGray;
                 font-size: 18px;
                 text-align: right;
+            }
+            @media (max-width: $breakWidth) {
+                width: 100%;
+                padding: 5% 10%;
+                margin-top: 0px;
             }
         }
         &:after { @extend .clear-both; }

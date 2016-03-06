@@ -1,9 +1,14 @@
 .header {
-    padding: 85px 122px 0px 122px;
+    @media (min-width: $breakWidth) {
+        padding: 85px 122px 0px 122px;
+    }
     .brand {
         font-size: 25px;
         float: left;
         color: $textBlack;
+        @media (max-width: $breakWidth) {
+            display: none;
+        }
     }
     .nav {
         padding-top: 12px;
