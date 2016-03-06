@@ -7,7 +7,7 @@ var articles = [
         id: 0,
         title: 'Try Git 0x00',
         createdAt: 'Mar 5, 2016',
-        summary: 'Git is a widely used source code management system for software development. These articles will teach you to learn it as fast as possible.',
+        summary: 'Git is a widely used source code management system for software development. These articles will lead you to learn it as fast as possible.',
         file: 'try-git-0.md',
         type: 'Technical articles'
     },
@@ -15,7 +15,7 @@ var articles = [
         id: 1,
         title: 'Try Git 0x01',
         createdAt: 'Mar 5, 2016',
-        summary: 'Git is a widely used source code management system for software development. These articles will teach you to learn it as fast as possible.',
+        summary: 'Git is a widely used source code management system for software development. These articles will lead you to learn it as fast as possible.',
         file: 'try-git-1.md',
         type: 'Technical articles'
     },
@@ -23,7 +23,7 @@ var articles = [
         id: 2,
         title: 'Try Git 0x02',
         createdAt: 'Mar 5, 2016',
-        summary: 'Git is a widely used source code management system for software development. These articles will teach you to learn it as fast as possible.',
+        summary: 'Git is a widely used source code management system for software development. These articles will lead you to learn it as fast as possible.',
         file: 'try-git-2.md',
         type: 'Technical articles'
     },
@@ -31,7 +31,7 @@ var articles = [
         id: 3,
         title: 'Try Git 0x03',
         createdAt: 'Mar 5, 2016',
-        summary: 'Git is a widely used source code management system for software development. These articles will teach you to learn it as fast as possible.',
+        summary: 'Git is a widely used source code management system for software development. These articles will lead you to learn it as fast as possible.',
         file: 'try-git-3.md',
         type: 'Technical articles'
     }
