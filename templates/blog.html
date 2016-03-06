@@ -8,7 +8,7 @@
         <div class="separate-line"></div>
     </div>
     <div class="list">
-        <div class="article" ng-class="{'active': $index == 0}"ng-repeat="article in articles track by $index" ng-show="article.type==currentType">
+        <a class="article" ng-class="{'active': $index == 0}" ng-repeat="article in articles track by $index" ng-show="article.type==currentType" ng-href="{{'/#/article/' + article.id}}">
             <div class="title">
                 {{article.title}}
             </div>
@@ -19,6 +19,6 @@
             <div class="create-time">
                 {{article.createdAt}}
             </div>
-        </div>
+        </a>
     </div>
 </div>

@@ -6,8 +6,33 @@
 
 @import "about.scss";
 @import "blog.scss";
+@import "article.scss";
 
 body {
     background-color: $mainBackgroudColor;
     font-family: $mainFontFamily;
+}
+
+.markdown {
+    color: $textBlack;
+    img {
+        max-width: 500px;
+        max-height: 800px;
+        margin: 20px 0px;
+    }
+    ul {
+        margin-top: 5px;
+        margin-bottom: 15px;
+    }
+    em {
+        font-size: 13px;
+    }
+    h3 {
+        margin-top: 30px;
+        color: $textDeepBlack;
+    }
+}
+
+a:hover {
+    text-decoration: none;
 }

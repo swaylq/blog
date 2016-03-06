@@ -91,8 +91,35 @@
   border-right: 20px solid transparent;
   border-top: 20px solid #f00; }
 
+#article {
+  padding: 100px 122px; }
+  #article .title {
+    text-align: center;
+    color: #303030;
+    font-size: 30px; }
+  #article .markdown {
+    margin-top: 60px; }
+
 body {
   background-color: white;
-  font-family: "Interstate-ExtraLight", sans-serif; }
+  font-family: "Interstate-ExtraLight", "Helvetica", "STHeiti"; }
+
+.markdown {
+  color: #303030; }
+  .markdown img {
+    max-width: 500px;
+    max-height: 800px;
+    margin: 20px 0px; }
+  .markdown ul {
+    margin-top: 5px;
+    margin-bottom: 15px; }
+  .markdown em {
+    font-size: 13px; }
+  .markdown h3 {
+    margin-top: 30px;
+    color: #2F2F2F; }
+
+a:hover {
+  text-decoration: none; }
 
 /*# sourceMappingURL=base.css.map */
