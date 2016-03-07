@@ -12,9 +12,9 @@
     </head>
     <body ng-app="blog">
         <div class="header" ng-controller="NavCtrl">
-            <div class="brand">
+            <a class="brand" href="/#/blog">
                 Sway
-            </div>
+            </a>
             <ul class="nav">
                 <li ng-class="{'active': nav=='/work'}" ng-click="goto('work')">Work</li>
                 <li ng-class="{'active': nav=='/about'}" ng-click="goto('about')">About</li>
