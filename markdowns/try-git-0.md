@@ -74,12 +74,12 @@
 - 推到远程仓库
 
   ```
-  $ git push origin master
+  $ git push
   ```
   
 - 从远程仓库拉取
 
   ```
-  $ git pull origin master
+  $ git pull
   ```
   [下一篇：Try Git 00x01](/#/article/1)
