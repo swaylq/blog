@@ -181,6 +181,8 @@
   font-size: 30px; }
 #article .markdown {
   margin-top: 60px; }
+#article #disqus_thread {
+  margin: 80px 30px; }
 
 body {
   background-color: white;
