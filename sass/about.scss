@@ -1,3 +1,97 @@
 #about {
-    padding: 140px 122px 0px 122px;
+    color: rgb(20,20,20);
+    font-family: 'PingFang SC';
+    @media (min-width: $breakWidth) {
+        padding: 100px 122px;
+    }
+    * {
+        box-sizing: border-box;
+    }
+    p {
+        margin: 0px;
+    }
+
+    a {
+        display: inline;
+        color: rgb(20,20,20);
+        text-decoration: underline;
+    }
+    
+    .resume-title {
+        border-bottom: 2px solid #D1D0D2;
+        padding-bottom: 5px;
+        .cn-name, .zn-name{
+            letter-spacing: 2px;
+            font-size: 28px;
+            font-weight: bold;;
+        }
+        .position {
+            line-height: 30px;
+            font-size: 15px;
+            color: #8B898D;
+        }
+    }
+    .content {
+        .left {
+            width: 25%;
+            float: left;
+        }
+        .right {
+            border-left: 2px solid #D1D0D2;
+            padding-left: 20px;
+            width: 74%;
+            float: left;
+        }
+        .part {
+            margin-top: 16px;
+            padding-bottom: 5px;
+            &>.title {
+                white-space: nowrap;
+                letter-spacing: 3px;
+                width: 34px;
+                font-weight: bold;
+                font-size: 15px;
+                border-bottom: 3px solid black;
+                padding-bottom: 8px;
+            }
+            &>.part-content {
+                margin-top: 18px;
+                .item {
+                    font-size: 10px;
+                    margin-bottom: 10px;
+                    .title {
+                        font-size: 11px;
+                        font-weight: bold;
+                        line-height: 20px;
+                    }
+                    .time {
+                        width: 25%;
+                        float: left;
+                    }
+                    .details {
+                        margin-top: -1px;
+                        width: 75%;
+                        line-height: 14px;
+                        float: left;
+                        a {
+                            font-weight: bold;
+                        }
+                        i {
+                            float: right;
+                            color: #8B898D;
+                            font-size: 8px;
+                        }
+                    }
+                    p {
+                        line-height: 14px;
+                    }
+                    &:after { @extend .clear-both; }
+                }
+            }
+        }
+        #education, #work-experiment{
+            border-bottom: 2px solid #D1D0D2;
+        }
+        &:after { @extend .clear-both; }
+    }
 }

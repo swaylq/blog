@@ -1,4 +1,4 @@
-.clear-both, .header:after, .footer:after, #blog .list:after {
+.clear-both, .header:after, .footer:after, #about .content .part > .part-content .item:after, #about .content:after, #blog .list:after {
   content: " ";
   display: table;
   clear: both; }
@@ -49,7 +49,76 @@
       display: inline-block; }
 
 #about {
-  padding: 140px 122px 0px 122px; }
+  color: #141414;
+  font-family: 'PingFang SC'; }
+  @media (min-width: 980px) {
+    #about {
+      padding: 100px 122px; } }
+  #about * {
+    box-sizing: border-box; }
+  #about p {
+    margin: 0px; }
+  #about a {
+    display: inline;
+    color: #141414;
+    text-decoration: underline; }
+  #about .resume-title {
+    border-bottom: 2px solid #D1D0D2;
+    padding-bottom: 5px; }
+    #about .resume-title .cn-name, #about .resume-title .zn-name {
+      letter-spacing: 2px;
+      font-size: 28px;
+      font-weight: bold; }
+    #about .resume-title .position {
+      line-height: 30px;
+      font-size: 15px;
+      color: #8B898D; }
+  #about .content .left {
+    width: 25%;
+    float: left; }
+  #about .content .right {
+    border-left: 2px solid #D1D0D2;
+    padding-left: 20px;
+    width: 74%;
+    float: left; }
+  #about .content .part {
+    margin-top: 16px;
+    padding-bottom: 5px; }
+    #about .content .part > .title {
+      white-space: nowrap;
+      letter-spacing: 3px;
+      width: 34px;
+      font-weight: bold;
+      font-size: 15px;
+      border-bottom: 3px solid black;
+      padding-bottom: 8px; }
+    #about .content .part > .part-content {
+      margin-top: 18px; }
+      #about .content .part > .part-content .item {
+        font-size: 10px;
+        margin-bottom: 10px; }
+        #about .content .part > .part-content .item .title {
+          font-size: 11px;
+          font-weight: bold;
+          line-height: 20px; }
+        #about .content .part > .part-content .item .time {
+          width: 25%;
+          float: left; }
+        #about .content .part > .part-content .item .details {
+          margin-top: -1px;
+          width: 75%;
+          line-height: 14px;
+          float: left; }
+          #about .content .part > .part-content .item .details a {
+            font-weight: bold; }
+          #about .content .part > .part-content .item .details i {
+            float: right;
+            color: #8B898D;
+            font-size: 8px; }
+        #about .content .part > .part-content .item p {
+          line-height: 14px; }
+  #about .content #education, #about .content #work-experiment {
+    border-bottom: 2px solid #D1D0D2; }
 
 #blog .select {
   margin: 100px 0px 0px 122px; }
@@ -132,7 +201,7 @@ body {
     margin-top: 30px;
     color: #2F2F2F; }
 
-a:hover {
+a:hover, a:focus, a:active {
   text-decoration: none; }
 
 /*# sourceMappingURL=base.css.map */
