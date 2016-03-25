@@ -70,7 +70,6 @@
                         line-height: 20px;
                     }
                     .time {
-                        padding-right: 5px;
                         width: 25%;
                         float: left;
                     }
@@ -79,6 +78,9 @@
                         width: 75%;
                         line-height: 14px;
                         float: left;
+                        @media (max-width: $breakWidth) {
+                            padding-left: 5px;
+                        }
                         a {
                             font-weight: bold;
                         }
