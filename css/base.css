@@ -32,21 +32,33 @@
       color: #303030; }
 
 .footer {
-  height: 215px;
-  padding: 81px 122px;
-  margin-top: 135px;
   background-color: #F2F2F2; }
-  .footer .left {
-    float: left; }
-    .footer .left .copyright {
-      color: #303030; }
-    .footer .left .resume {
-      color: #999999;
-      margin-top: 17px; }
-  .footer .right {
-    float: right; }
-    .footer .right .nav li {
-      display: inline-block; }
+  @media (min-width: 980px) {
+    .footer {
+      margin-top: 135px;
+      height: 215px;
+      padding: 81px 122px; }
+      .footer .left {
+        float: left; }
+        .footer .left .resume {
+          margin-top: 17px; }
+      .footer .right {
+        float: right; } }
+  @media (max-width: 980px) {
+    .footer {
+      margin-top: 55px;
+      height: 115px;
+      padding: 10px; }
+      .footer .left {
+        margin-left: 15px; }
+      .footer .right {
+        margin-top: 10px; } }
+  .footer .left .copyright {
+    color: #303030; }
+  .footer .left .resume {
+    color: #999999; }
+  .footer .right .nav li {
+    display: inline-block; }
 
 #about {
   color: #141414;
@@ -54,6 +66,9 @@
   @media (min-width: 980px) {
     #about {
       padding: 100px 122px; } }
+  @media (max-width: 980px) {
+    #about {
+      padding: 10px; } }
   #about * {
     box-sizing: border-box; }
   #about p {
@@ -73,14 +88,15 @@
       line-height: 30px;
       font-size: 15px;
       color: #8B898D; }
-  #about .content .left {
-    width: 25%;
-    float: left; }
-  #about .content .right {
-    border-left: 2px solid #D1D0D2;
-    padding-left: 20px;
-    width: 74%;
-    float: left; }
+  @media (min-width: 980px) {
+    #about .content .left {
+      width: 25%;
+      float: left; }
+    #about .content .right {
+      border-left: 2px solid #D1D0D2;
+      padding-left: 20px;
+      width: 74%;
+      float: left; } }
   #about .content .part {
     margin-top: 16px;
     padding-bottom: 5px; }
@@ -117,8 +133,12 @@
             font-size: 8px; }
         #about .content .part > .part-content .item p {
           line-height: 14px; }
-  #about .content #education, #about .content #work-experiment {
-    border-bottom: 2px solid #D1D0D2; }
+  @media (max-width: 980px) {
+    #about .content #skills, #about .content #work-experiment {
+      border-bottom: 2px solid #D1D0D2; } }
+  @media (min-width: 980px) {
+    #about .content #education, #about .content #work-experiment {
+      border-bottom: 2px solid #D1D0D2; } }
 
 #blog .select {
   margin: 100px 0px 0px 122px; }

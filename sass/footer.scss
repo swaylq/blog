@@ -1,20 +1,39 @@
 .footer {
-    height: 215px;
-    padding: 81px 122px;
-    margin-top: 135px;
     background-color: $bgGray;
+    @media (min-width: $breakWidth) {
+        margin-top: 135px;
+        height: 215px;
+        padding: 81px 122px;
+        .left {
+            float: left;
+            .resume {
+                margin-top: 17px;
+            }
+        }
+        .right {
+            float: right;
+        }
+    }
+    @media (max-width: $breakWidth) {
+        margin-top: 55px;
+        height: 115px;
+        padding: 10px;
+        .left {
+            margin-left: 15px;
+        }
+        .right {
+            margin-top: 10px;
+        }
+    }
     .left {
-        float: left;
         .copyright {
             color: $textBlack;
         }
         .resume {
             color: $textGray;
-            margin-top: 17px;
         }
     }
     .right {
-        float: right;
         .nav {
             li {
                 display: inline-block;;

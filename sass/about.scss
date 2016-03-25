@@ -4,6 +4,9 @@
     @media (min-width: $breakWidth) {
         padding: 100px 122px;
     }
+    @media (max-width: $breakWidth) {
+        padding: 10px;
+    }
     * {
         box-sizing: border-box;
     }
@@ -32,15 +35,17 @@
         }
     }
     .content {
-        .left {
-            width: 25%;
-            float: left;
-        }
-        .right {
-            border-left: 2px solid #D1D0D2;
-            padding-left: 20px;
-            width: 74%;
-            float: left;
+        @media(min-width: $breakWidth) {
+            .left {
+                width: 25%;
+                float: left;
+            }
+            .right {
+                border-left: 2px solid #D1D0D2;
+                padding-left: 20px;
+                width: 74%;
+                float: left;
+            }
         }
         .part {
             margin-top: 16px;
@@ -89,8 +94,15 @@
                 }
             }
         }
-        #education, #work-experiment{
-            border-bottom: 2px solid #D1D0D2;
+        @media (max-width: $breakWidth) {
+            #skills, #work-experiment{
+                border-bottom: 2px solid #D1D0D2;
+            }
+        }
+        @media (min-width: $breakWidth) {
+            #education, #work-experiment{
+                border-bottom: 2px solid #D1D0D2;
+            }
         }
         &:after { @extend .clear-both; }
     }
