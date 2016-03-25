@@ -118,6 +118,7 @@
           font-weight: bold;
           line-height: 20px; }
         #about .content .part > .part-content .item .time {
+          padding-right: 5px;
           width: 25%;
           float: left; }
         #about .content .part > .part-content .item .details {
