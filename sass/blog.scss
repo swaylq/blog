@@ -1,65 +1,66 @@
 #blog {
-    .select {
-        margin: 100px 0px 0px 122px;
-        .current-type {
-            display: inline-block;
-            color: $textBlack;
-            font-size: 30px;
-        }
-        i {
-            margin-left: 15px;
-            vertical-align: super;
-            color: $textGray;
-            cursor: pointer;
-        }
-        @media (max-width: $breakWidth) {
-            margin: 5% 10%;
-        }
+  .select {
+    margin: 100px 0 0 122px;
+    .current-type {
+      display: inline-block;
+      color: $textBlack;
+      font-size: 30px;
     }
-    .list {
-        margin-top: 80px;
-        .article {
-            float: left;
-            width: 50%;
-            height: 430px;
-            padding: 88px 122px;
-            &.active {
-                background-color: $bgGray;
-            }
-            .title {
-                color: $textBlack;
-                font-size: 30px;
-                text-align: left;
-            }
-            .summary {
-                color: $textGray;
-                font-size: 18px;
-                line-height: 40px;
-                height: 120px;
-                word-break: break-all;
-                overflow-y: hidden;
-            }
-            .create-time {
-                margin-top: 20px;
-                color: $textGray;
-                font-size: 18px;
-                text-align: right;
-            }
-            @media (max-width: $breakWidth) {
-                width: 100%;
-                padding: 5% 10%;
-                margin-top: 0px;
-            }
-        }
-        &:after { @extend .clear-both; }
+    i {
+      margin-left: 15px;
+      vertical-align: super;
+      color: $textGray;
+      cursor: pointer;
     }
+    @media (max-width: $breakWidth) {
+      margin: 5% 10%;
+    }
+  }
+  .list {
+    margin-top: 80px;
+    .article {
+      float: left;
+      width: 50%;
+      height: 430px;
+      padding: 88px 122px;
+      &.active {
+        background-color: $bgGray;
+      }
+      .title {
+        cursor: pointer;
+        color: $textBlack;
+        font-size: 30px;
+        text-align: left;
+      }
+      .summary {
+        color: $textGray;
+        font-size: 18px;
+        line-height: 40px;
+        height: 120px;
+        word-break: break-all;
+        overflow-y: hidden;
+      }
+      .create-time {
+        margin-top: 20px;
+        color: $textGray;
+        font-size: 18px;
+        text-align: right;
+      }
+      @media (max-width: $breakWidth) {
+        width: 100%;
+        padding: 5% 10%;
+        margin-top: 0;
+      }
+    }
+    &:after {
+      @extend .clear-both;
+    }
+  }
 }
-
-
 .arrow-down {
-    width: 0; 
-    height: 0; 
-    border-left: 20px solid transparent;
-    border-right: 20px solid transparent;
-    border-top: 20px solid #f00;
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-top: 20px solid #f00;
 }

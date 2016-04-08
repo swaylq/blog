@@ -1,0 +1,34 @@
+{
+  "name": "sway-blog",
+  "version": "1.0.0",
+  "description": "sway's blog",
+  "main": "index.js",
+  "dependencies": {
+    "css-loader": "^0.23.1",
+    "node-sass": "^3.4.2",
+    "sass-loader": "^3.2.0",
+    "style-loader": "^0.13.1",
+    "textlint": "^6.3.0",
+    "textlint-rule-editorconfig": "^1.0.0"
+  },
+  "devDependencies": {
+    "webpack": "^1.12.14"
+  },
+  "scripts": {
+    "build": "webpack" ,
+    "watch": "webpack --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/swaylq/mygithubpage.git"
+  },
+  "keywords": [
+    "sway"
+  ],
+  "author": "sway",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/swaylq/mygithubpage/issues"
+  },
+  "homepage": "https://github.com/swaylq/mygithubpage#readme"
+}

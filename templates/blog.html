@@ -8,7 +8,7 @@
         <div class="separate-line"></div>
     </div>
     <div class="list">
-        <a class="article" ng-class="{'active': $index == 0}" ng-repeat="article in articles track by $index" ng-show="article.type==currentType" ng-href="{{'/#/article/' + article.id}}">
+        <a class="article" ng-class="{'active': $index == 0}" ng-repeat="article in articles | orderBy : 'id': true" ng-click="showArticle(article)">
             <div class="title">
                 {{article.title}}
             </div>
