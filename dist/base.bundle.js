@@ -547,6 +547,14 @@
 	  file: '',
 	  type: 'Course',
 	  url: 'https://swaylq.github.io/express-test/slide.html'
+	},{
+	  id: 6,
+	  title: 'Learn AngularJS',
+	  createdAt: 'Apr 17, 2016',
+	  summary: 'A basic guide about AngularJS',
+	  file: '',
+	  type: 'Course',
+	  url: 'http://swaylq.github.io/course/slider/angular.html'
 	}];
 
 	module.exports = articles;
