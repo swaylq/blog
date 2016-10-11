@@ -28,7 +28,7 @@ var articles = [{
   createdAt: 'Mar 5, 2016',
   summary: 'Git is a widely used source code management system for software development. These articles will lead you to learn it as fast as possible.',
   file: 'try-git-3.md',
-  type: 'Technical articles',  
+  type: 'Technical articles',
   url: '',
 }, {
   id: 4,
@@ -54,6 +54,14 @@ var articles = [{
   file: '',
   type: 'Course',
   url: 'http://swaylq.github.io/course/slider/angular.html'
+}, {
+  id: 7,
+  title: 'Css Box Model',
+  createdAt: 'Oct 11, 2016 ',
+  summary: 'A basic guide about CSS Box Model',
+  file: 'css-box.md',
+  type: 'Course',
+  url: '',
 }];
 
 module.exports = articles;
