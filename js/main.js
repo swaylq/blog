@@ -5,7 +5,7 @@ $(document).ready(function () {
   NProgress.start();
 });
 
-$(window).load(function () {
+$(window).on('load', function () {
   NProgress.done();
 });
 
@@ -62,7 +62,7 @@ blog.controller('BlogCtrl', ['$scope', function ($scope) {
   $scope.types = ['Technical articles', 'Literary notes'];
   $scope.currentType = 'Technical articles';
   $scope.articles = articles;
-  
+
   $scope.showArticle = function (article) {
     if (article.url != '') {
       window.location.href = article.url;

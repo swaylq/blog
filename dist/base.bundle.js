@@ -45,13 +45,13 @@
 /***/ function(module, exports, __webpack_require__) {
 
 	__webpack_require__(1);
-	var articles = __webpack_require__(5);
+	var articles = __webpack_require__(4);
 
 	$(document).ready(function () {
 	  NProgress.start();
 	});
 
-	$(window).load(function () {
+	$(window).on('load', function () {
 	  NProgress.done();
 	});
 
@@ -108,7 +108,7 @@
 	  $scope.types = ['Technical articles', 'Literary notes'];
 	  $scope.currentType = 'Technical articles';
 	  $scope.articles = articles;
-	  
+
 	  $scope.showArticle = function (article) {
 	    if (article.url != '') {
 	      window.location.href = article.url;
@@ -147,6 +147,7 @@
 	  }
 	}])
 
+
 /***/ },
 /* 1 */
 /***/ function(module, exports, __webpack_require__) {
@@ -154,10 +155,10 @@
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(2);
+	var content = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"!!./../node_modules/css-loader/index.js!./../node_modules/sass-loader/index.js!./base.scss\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(4)(content, {});
+	var update = __webpack_require__(3)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -174,77 +175,8 @@
 	}
 
 /***/ },
-/* 2 */
-/***/ function(module, exports, __webpack_require__) {
-
-	exports = module.exports = __webpack_require__(3)();
-	// imports
-
-
-	// module
-	exports.push([module.id, ".clear-both, .header:after, .footer:after, #about .content .part > .part-content .item:after, #about .content:after, #blog .list:after {\n  content: \" \";\n  display: table;\n  clear: both; }\n\n.separate-line {\n  border-top: 1px solid #DFDFDF;\n  width: 90px;\n  margin: 30px 0px; }\n\n@media (min-width: 980px) {\n  .header {\n    padding: 85px 122px 0px 122px; } }\n\n.header .brand {\n  font-size: 25px;\n  float: left;\n  color: #303030; }\n  @media (max-width: 980px) {\n    .header .brand {\n      display: none; } }\n\n.header .nav {\n  padding-top: 12px;\n  float: right; }\n  .header .nav li {\n    color: #999999;\n    font-size: 16px;\n    width: 80px;\n    cursor: pointer;\n    text-align: center;\n    display: inline-block; }\n    .header .nav li.active {\n      color: #303030; }\n\n.footer {\n  background-color: #F2F2F2; }\n  @media (min-width: 980px) {\n    .footer {\n      margin-top: 135px;\n      height: 215px;\n      padding: 81px 122px; }\n      .footer .left {\n        float: left; }\n        .footer .left .resume {\n          margin-top: 17px; }\n      .footer .right {\n        float: right; } }\n  @media (max-width: 980px) {\n    .footer {\n      margin-top: 55px;\n      height: 115px;\n      padding: 10px; }\n      .footer .left {\n        margin-left: 15px; }\n      .footer .right {\n        margin-top: 10px; } }\n  .footer .left .copyright {\n    color: #303030; }\n  .footer .left .resume {\n    color: #999999; }\n  .footer .right .nav li {\n    display: inline-block; }\n\n#about {\n  color: #141414;\n  font-family: 'PingFang SC'; }\n  @media (min-width: 980px) {\n    #about {\n      padding: 100px 122px; } }\n  @media (max-width: 980px) {\n    #about {\n      padding: 10px; } }\n  #about * {\n    box-sizing: border-box; }\n  #about p {\n    margin: 0px; }\n  #about a {\n    display: inline;\n    color: #141414;\n    text-decoration: underline; }\n  #about .resume-title {\n    border-bottom: 2px solid #D1D0D2;\n    padding-bottom: 5px; }\n    #about .resume-title .cn-name, #about .resume-title .zn-name {\n      letter-spacing: 2px;\n      font-size: 28px;\n      font-weight: bold; }\n    #about .resume-title .position {\n      line-height: 30px;\n      font-size: 15px;\n      color: #8B898D; }\n  @media (min-width: 980px) {\n    #about .content .left {\n      width: 25%;\n      float: left; }\n    #about .content .right {\n      border-left: 2px solid #D1D0D2;\n      padding-left: 20px;\n      width: 74%;\n      float: left; } }\n  #about .content .part {\n    margin-top: 16px;\n    padding-bottom: 5px; }\n    #about .content .part > .title {\n      white-space: nowrap;\n      letter-spacing: 3px;\n      width: 34px;\n      font-weight: bold;\n      font-size: 15px;\n      border-bottom: 3px solid black;\n      padding-bottom: 8px; }\n    #about .content .part > .part-content {\n      margin-top: 18px; }\n      #about .content .part > .part-content .item {\n        font-size: 10px;\n        margin-bottom: 10px; }\n        #about .content .part > .part-content .item .title {\n          font-size: 11px;\n          font-weight: bold;\n          line-height: 20px; }\n        #about .content .part > .part-content .item .time {\n          width: 25%;\n          float: left; }\n        #about .content .part > .part-content .item .details {\n          margin-top: -1px;\n          width: 75%;\n          line-height: 14px;\n          float: left; }\n          @media (max-width: 980px) {\n            #about .content .part > .part-content .item .details {\n              padding-left: 5px; } }\n          #about .content .part > .part-content .item .details a {\n            font-weight: bold; }\n          #about .content .part > .part-content .item .details i {\n            float: right;\n            color: #8B898D;\n            font-size: 8px; }\n        #about .content .part > .part-content .item p {\n          line-height: 14px; }\n  @media (max-width: 980px) {\n    #about .content #skills, #about .content #work-experiment {\n      border-bottom: 2px solid #D1D0D2; } }\n  @media (min-width: 980px) {\n    #about .content #education, #about .content #work-experiment {\n      border-bottom: 2px solid #D1D0D2; } }\n\n#blog .select {\n  margin: 100px 0 0 122px; }\n  #blog .select .current-type {\n    display: inline-block;\n    color: #303030;\n    font-size: 30px; }\n  #blog .select i {\n    margin-left: 15px;\n    vertical-align: super;\n    color: #999999;\n    cursor: pointer; }\n  @media (max-width: 980px) {\n    #blog .select {\n      margin: 5% 10%; } }\n\n#blog .list {\n  margin-top: 80px; }\n  #blog .list .article {\n    float: left;\n    width: 50%;\n    height: 430px;\n    padding: 88px 122px; }\n    #blog .list .article.active {\n      background-color: #F2F2F2; }\n    #blog .list .article .title {\n      cursor: pointer;\n      color: #303030;\n      font-size: 30px;\n      text-align: left; }\n    #blog .list .article .summary {\n      color: #999999;\n      font-size: 18px;\n      line-height: 40px;\n      height: 120px;\n      word-break: break-all;\n      overflow-y: hidden; }\n    #blog .list .article .create-time {\n      margin-top: 20px;\n      color: #999999;\n      font-size: 18px;\n      text-align: right; }\n    @media (max-width: 980px) {\n      #blog .list .article {\n        width: 100%;\n        padding: 5% 10%;\n        margin-top: 0; } }\n\n.arrow-down {\n  width: 0;\n  height: 0;\n  border-left: 20px solid transparent;\n  border-right: 20px solid transparent;\n  border-top: 20px solid #f00; }\n\n@media (min-width: 980px) {\n  #article {\n    padding: 100px 122px; } }\n\n#article .title {\n  text-align: center;\n  color: #303030;\n  font-size: 30px; }\n\n#article .markdown {\n  margin-top: 60px; }\n\n#article #disqus_thread {\n  margin: 80px 30px 0px 30px; }\n\n#article blockquote {\n  font-size: 15px;\n  margin-top: 15px;\n  margin-bottom: 15px;\n  color: gray; }\n\nbody {\n  background-color: white;\n  font-family: PingHei, \"PingFang SC\", \"Helvetica Neue\", Helvetica, STHeitiSC-Light, Arial, sans-serif; }\n\n.markdown {\n  color: #303030; }\n  .markdown img {\n    max-width: 500px;\n    max-height: 800px;\n    margin: 20px 0px; }\n  .markdown ul {\n    margin-top: 5px;\n    margin-bottom: 15px; }\n  .markdown em {\n    font-size: 13px; }\n  .markdown h3 {\n    margin-top: 30px;\n    color: #2F2F2F; }\n\na:hover, a:focus, a:active {\n  text-decoration: none; }\n", ""]);
-
-	// exports
-
-
-/***/ },
+/* 2 */,
 /* 3 */
-/***/ function(module, exports) {
-
-	/*
-		MIT License http://www.opensource.org/licenses/mit-license.php
-		Author Tobias Koppers @sokra
-	*/
-	// css base code, injected by the css-loader
-	module.exports = function() {
-		var list = [];
-
-		// return the list of modules as css string
-		list.toString = function toString() {
-			var result = [];
-			for(var i = 0; i < this.length; i++) {
-				var item = this[i];
-				if(item[2]) {
-					result.push("@media " + item[2] + "{" + item[1] + "}");
-				} else {
-					result.push(item[1]);
-				}
-			}
-			return result.join("");
-		};
-
-		// import a list of modules into the list
-		list.i = function(modules, mediaQuery) {
-			if(typeof modules === "string")
-				modules = [[null, modules, ""]];
-			var alreadyImportedModules = {};
-			for(var i = 0; i < this.length; i++) {
-				var id = this[i][0];
-				if(typeof id === "number")
-					alreadyImportedModules[id] = true;
-			}
-			for(i = 0; i < modules.length; i++) {
-				var item = modules[i];
-				// skip already imported module
-				// this implementation is not 100% perfect for weird media query combinations
-				//  when a module is imported multiple times with different media queries.
-				//  I hope this will never occur (Hey this way we have smaller bundles)
-				if(typeof item[0] !== "number" || !alreadyImportedModules[item[0]]) {
-					if(mediaQuery && !item[2]) {
-						item[2] = mediaQuery;
-					} else if(mediaQuery) {
-						item[2] = "(" + item[2] + ") and (" + mediaQuery + ")";
-					}
-					list.push(item);
-				}
-			}
-		};
-		return list;
-	};
-
-
-/***/ },
-/* 4 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/*
@@ -496,7 +428,7 @@
 
 
 /***/ },
-/* 5 */
+/* 4 */
 /***/ function(module, exports) {
 
 	var articles = [{
